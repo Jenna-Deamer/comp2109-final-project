@@ -10,10 +10,10 @@
 </head>
 <body <?php body_class(); ?>>
 <header>
-    <nav class="navbar navbar-expand-lg shadow-sm">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="<?php echo esc_url(home_url()); ?>">
-                <img src="<?php echo esc_url(home_url('')); ?>"
+                <img src="<?php echo esc_url(home_url('/wp-content/themes/assignmentone/assets/logo.png')); ?>"
                      alt="header logo" class="logo-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -23,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <?php
                 wp_nav_menu(array(
-                    'menu' => 'customMenu',
+                    'menu' => 'Main Navigation',
                     'theme_location' => '',
                     'depth' => 1,
                     'fallback_cb' => false,
@@ -33,5 +33,4 @@
             </div>
         </div>
     </nav>
-
 </header>

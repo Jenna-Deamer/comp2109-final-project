@@ -12,6 +12,8 @@ add_action( 'after_setup_theme','WebsiteNavigation_theme_setup');
 //add support for featured image for posts
 add_theme_support( 'post-thumbnails' );
 
+
+
 //setup footer widgets
 //function customFooter (){
 //    register_sidebar(array(

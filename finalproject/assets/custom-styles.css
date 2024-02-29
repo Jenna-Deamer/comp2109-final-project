@@ -1,0 +1,82 @@
+:root {
+
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+h1{
+    font-size: 48px;
+}
+h2{
+    font-size: 38px;
+}
+h3{
+    font-size: 28px;
+}
+/*NAV*/
+#navbarNav{
+    justify-content: center;
+}
+.navbar a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.navbar a:hover{
+    color: lightblue;
+    transition: .2s;
+}
+/*HOME*/
+.heroSection {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    box-shadow: 0px 10px 10px -5px black;
+
+}
+.heroContent {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%; /* Ensure heroContent takes up full height */
+}
+.heroContent > h1,
+.heroContent > h2 {
+    text-shadow: 1px 1px 2px black;
+}
+
+.reasonCard {
+    padding: 16px;
+    background-color: lightblue;
+}
+.courseCard {
+    min-height: 600px;
+    background-color: azure;
+    box-shadow: 0 10px 10px -5px black;
+    border-radius: 8px;
+}
+.cardBody{
+    padding: 0 20px 20px 20px;
+}
+.courseCard figure img {
+    max-width: 100%;
+    background-position: right;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+    border-bottom: solid 2px black;
+}
+
+/* Make price & add to cart button spaced out nicely on bottom of card */
+.priceSection {
+    display: flex;
+    justify-content: space-between;
+}
