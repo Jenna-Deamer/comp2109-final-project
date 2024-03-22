@@ -1,6 +1,7 @@
 :root {
     --white: #ffeeee;
     --black: #0c0303;
+    --primary: #365946;
     --action-colour: #e35934;
     --action-colour-hover: #f14d22
 }
@@ -22,12 +23,13 @@ h2{
 h3{
     font-size: 28px;
 }
+
 /*NAV*/
 #navbarNav{
     justify-content: center;
 }
 .navbar a {
-    color: white;
+    color: var(--white);
     text-align: center;
     margin-right: 1.2em;
     margin-left: 1.2em;
@@ -35,11 +37,13 @@ h3{
     font-size: 1.2em;
 }
 .navbar a:hover{
-    color: lightblue;
-    transition: .2s;
+    color: var(--action-colour-hover);
+    transition: .2s ease-in;
 }
 /*HOME*/
 .heroSection {
+    /*Make splashImage go behind the nav bar that's 58px tall*/
+    margin-top: -58px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -73,6 +77,10 @@ h3{
     border: none;
     text-decoration: none;
 }
+.heroContent>a:hover{
+    transition: .2s ease-in;
+    background-color: var(--action-colour-hover);
+}
 /*Mobile Hero Heading Styles*/
 @media(max-width: 990px){
     .heroContent > h1{
@@ -101,6 +109,8 @@ h3{
 
 }
 .reasonCard {
+    background-color: var(--primary);
+    color: var(--white);
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -108,7 +118,12 @@ h3{
     padding: 16px 24px 16px 24px;
     border-left: solid var(--black) 2px;
     border-top: solid var(--black) 2px;
-    min-height: 200px;
+    min-height: 30vh;
+}
+
+/*Featured Section*/
+.featuredSection{
+    padding: 4em;
 }
 #featuredSectionHeader{
     text-align: center;
@@ -151,12 +166,18 @@ h3{
     border-bottom: solid 2px black;
     border-radius: 10px 10px 0 0;
 }
-
+.cardHeading{
+    text-align: center;
+    color: var(--black);
+}
+.cardHeading:hover{
+    transition: .2s ease-in;
+    color: var(--action-colour);
+}
 .courseCardBody {
     padding: 16px;
     /*Make body same height, forcing buttons to align with other cards*/
     min-height: 300px;
-    max-height: 400px;
 }
 .courseCardBody>h3{
     text-align: center;
@@ -173,18 +194,8 @@ h3{
     padding: 16px;
 }
 
-.courseCardFooter > span {
-    font-style: italic;
-}
-/*Buttons*/
-.detailsButton{
-    color: var(--action-colour);
 
-}
-.detailsButton:hover{
-    transition: .2s ease-in;
-    color: var(--action-colour-hover);
-}
+/*Buttons*/
 .courseCardButton{
     background-color: var(--action-colour);
     color: var(--white);
@@ -194,6 +205,7 @@ h3{
     border: none;
     text-decoration: none;
     cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 .courseCardButton:hover{
     transition: .2s ease-in;
@@ -206,19 +218,19 @@ h3{
 
 #featuredShopLink{
     text-align: center;
-    margin-bottom: 64px;
 }
-#featuredShopLink > a{
-    font-weight: bold;
-    margin-top: 20px;
-    box-shadow: 0 10px 10px -5px black;
+#featuredShopLink>a{
+    font-size: 1.5em;
 }
+
+
 /*FOOTER*/
 footer{
-    background-color: grey;
+    background-color: var(--primary);
+    color: var(--white);
 }
 .copyrightSection{
-    background-color: darkblue;
+    background-color: #233f31;
     color: white;
     display: flex;
     justify-content: center;
