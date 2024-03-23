@@ -187,6 +187,30 @@ h3{
     justify-content: flex-end;
 }
 
+/*Tags & Category Styles*/
+.tagsWrapper{
+    margin-bottom: 10px;
+}
+
+.tagBox,
+.categoryBox{
+    background-color: #f2f2f2;
+    color: var(--black);
+    text-decoration: none;
+    padding: 4px 8px 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.tagBox:hover,
+.categoryBox:hover{
+    transition: .2s ease-in;
+    color: var(--action-colour-hover);
+}
+
+
+/*Card Footer - Price info & add to cart button*/
 .courseCardFooter {
     border-top: solid 1px var(--black);
     display: flex;

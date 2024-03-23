@@ -54,7 +54,7 @@ function courseCards_shortcode() {
         // Get tags
         $tags = get_the_terms($product->get_id(), 'product_tag');
         // Get categories
-        $categories = get_the_category($product->get_id());
+        $categories = get_the_terms($product->get_id(), 'product_cat');
         //get image
         $image = wp_get_attachment_image_src(get_post_thumbnail_id($product->get_id()), 'full');
         ?>
@@ -66,9 +66,26 @@ function courseCards_shortcode() {
                 <div class="courseCardDescription">
                     <p><?php echo wp_kses_post($product->get_short_description()); ?></p>
                 </div>
-                    <p>Category: <?php echo get_the_category_list(', '); ?></p>
-                <small>Tags:</small>
-            </div>
+
+    <p>Categories:
+        <?php
+        //loop through all category & tags, for grey bg styles
+        foreach ($categories as $category) {
+            echo '<a href="' . get_term_link($category) . '" class="categoryBox">' . $category->name . '</a>';
+        }
+        ?>
+    </p>
+<div class="tagsWrapper">
+    <p>Tags:
+        <?php
+        foreach ($tags as $tag) {
+            echo '<a href="' . get_term_link($tag) . '" class="tagBox">' . $tag->name . '</a>';
+        }
+        ?>
+    </p>
+</div>
+</div>
+
 
             <div class="courseCardFooter">
                 <p><strong>Price:</strong> <?php echo $product->get_price_html(); ?></p>
