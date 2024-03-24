@@ -17,17 +17,17 @@ get_header();
 
     <section class="row reasonCardContainer">
         <article class="reasonCard col-lg-4 text-center">
-            <i class="bi bi-cash-coin"></i>
+            <img src="/wp-content/themes/finalproject/assets/salary.png" alt="Salary Icon" width="50" height="50">
             <h3>Reason 1</h3>
             <p><?php echo wp_kses_post(get_field('reason_card_text_one'))?></p>
         </article>
         <article class="reasonCard col-lg-4 text-center">
-            <i class="bi bi-journal-bookmark-fill"></i>
+            <img src="/wp-content/themes/finalproject/assets/light-bulb.png" alt="light bulb Icon" width="50" height="50">
             <h3>Reason 2</h3>
             <p><?php echo wp_kses_post(get_field('reason_card_text_two'))?></p>
         </article>
         <article class="reasonCard col-lg-4 text-center">
-            <i class="bi bi-lightbulb"></i>
+            <img src="/wp-content/themes/finalproject/assets/online-learning.png" alt="Online learning icon" width="50" height="50">
             <h3>Reason 3</h3>
             <p><?php echo wp_kses_post(get_field('reason_card_text_three'))?></p>
         </article>

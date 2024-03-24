@@ -25,25 +25,46 @@ h3{
 }
 
 /*NAV*/
-#navbarNav{
-    justify-content: center;
+.logo {
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.2);
 }
 .navbar a {
     color: var(--white);
-    text-align: center;
-    margin-right: 1.2em;
-    margin-left: 1.2em;
     text-decoration: none;
     font-size: 1.2em;
+    text-align: center;
+    /* Space between links */
+    margin-right: 1.2em;
+    margin-left: 1.2em;
+    /* Position for underline animation */
+    position: relative;
 }
-.navbar a:hover{
-    color: var(--action-colour-hover);
-    transition: .2s ease-in;
+
+/* Underline slide in effect on hover */
+.navbar a:not(.logo)::after {
+    content: '';
+    position: absolute; /* Position  pseudo-element */
+    width: 0; /* Initial width for sliding animation */
+    height: 2px; /* Set height for underline */
+    background-color: var(--action-colour);
+    /*Align underline at bottom of link*/
+    bottom: 0;
+    left: 0;
+    transition: width 0.2s ease-in-out;
+}
+
+.navbar a:hover:not(.logo)::after {
+    /* Expand  width on hover */
+    width: 100%;
 }
 /*HOME*/
 .heroSection {
-    /*Make splashImage go behind the nav bar that's 58px tall*/
-    margin-top: -58px;
+    /*Make splashImage go behind the nav bar that's 126px tall*/
+    margin-top: -126px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -103,22 +124,27 @@ h3{
         font-size: 20px;
     }
 }
-
-.reasonCardContainer{
+/*REASON CARDS*/
+.reasonCardContainer {
     box-shadow: 0 10px 10px -5px var(--black);
-
 }
+
 .reasonCard {
     background-color: var(--primary);
     color: var(--white);
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
     padding: 16px 24px 16px 24px;
     border-left: solid var(--black) 2px;
     border-top: solid var(--black) 2px;
     min-height: 30vh;
+    /*Center content*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reasonCard img {
+    margin-bottom: 20px;
 }
 
 /*Featured Section*/
@@ -247,7 +273,10 @@ h3{
     font-size: 1.5em;
 }
 
-
+/*SHOP*/
+.shopContainer{
+    padding: 4em;
+}
 /*FOOTER*/
 footer{
     background-color: var(--primary);
