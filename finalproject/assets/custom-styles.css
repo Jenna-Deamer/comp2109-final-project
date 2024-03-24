@@ -279,8 +279,18 @@ h3{
 }
 /*FOOTER*/
 footer{
+    padding-top: 1em;
     background-color: var(--primary);
     color: var(--white);
+}
+.footerContent{
+    margin-bottom: 1em;
+}
+/*Center text content on small screens*/
+@media (max-width: 990px) {
+   .footerContent {
+        text-align: center;
+    }
 }
 .copyrightSection{
     background-color: #233f31;

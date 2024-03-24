@@ -31,6 +31,13 @@ function customFooter (){
     register_sidebar(array(
         'name' =>__( 'Footer Widget Area Three', 'customFooter'),
         'id' => 'footer-widget-area-three',
+        'description' => __( 'The other content widget area', 'customFooter'),
+        'before_widget' => '<div class="content-widget">',
+        'after_widget' => '</div>',
+    ));
+    register_sidebar(array(
+        'name' =>__( 'Footer Widget Area Four', 'customFooter'),
+        'id' => 'footer-widget-area-four',
         'description' => __( 'The copyright widget area', 'customFooter'),
         'before_widget' => '<div class="copyright-widget">',
         'after_widget' => '</div>',
