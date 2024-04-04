@@ -62,7 +62,7 @@ h3{
     width: 100%;
 }
 /*HOME*/
-.heroSection {
+.hero-section {
     /*Make splashImage go behind the nav bar that's 126px tall*/
     margin-top: -126px;
     background-size: cover;
@@ -70,7 +70,7 @@ h3{
     background-repeat: no-repeat;
     height: 70vh;
 }
-.heroContent {
+.hero-content {
     color: white;
     display: flex;
     flex-direction: column;
@@ -79,14 +79,14 @@ h3{
     text-align: center;
     height: 100%; /* Ensure heroContent takes up full height */
 }
-.heroContent > h1,
-.heroContent > h2 {
+.hero-content > h1,
+.hero-content > h2 {
     text-shadow: 1px 1px 2px var(--black)z;
 }
-.heroContent > h2{
+.hero-content > h2{
     margin-top: .2em;
 }
-.heroContent > a{
+.hero-content> a{
     margin-top: 1em;
     width: 200px;
     font-weight: bold;
@@ -98,38 +98,38 @@ h3{
     border: none;
     text-decoration: none;
 }
-.heroContent>a:hover{
+.hero-content>a:hover{
     transition: .2s ease-in;
     background-color: var(--action-colour-hover);
 }
 /*Mobile Hero Heading Styles*/
 @media(max-width: 990px){
-    .heroContent > h1{
+    .hero-content > h1{
         font-size: 38px;
     }
-    .heroContent > h2 {
+    .hero-content > h2 {
     font-size: 28px;
     }
 }
 @media(max-width: 769px){
-    .heroContent{
+    .hero-content{
       align-items: center;
     }
 }
 @media(max-width: 399px){
-    .heroContent > h1{
+    .hero-content > h1{
         font-size: 28px;
     }
-    .heroContent > h2 {
+    .hero-content > h2 {
         font-size: 20px;
     }
 }
 /*REASON CARDS*/
-.reasonCardContainer {
+.reason-card-container {
     box-shadow: 0 10px 10px -5px var(--black);
 }
 
-.reasonCard {
+.reason-card {
     background-color: var(--primary);
     color: var(--white);
     padding: 16px 24px 16px 24px;
@@ -143,110 +143,26 @@ h3{
     justify-content: center;
 }
 
-.reasonCard img {
+.reason-card > img {
     margin-bottom: 20px;
 }
 
 /*Featured Section*/
-.featuredSection{
-    padding: 4em;
+.featured-section{
+    padding-bottom: 4em;
+    padding-top: 4em;
 }
-#featuredSectionHeader{
-    text-align: center;
-    padding-top: 40px;
-    padding-bottom: 20px;
-}
-/*Course Product Cards*/
-.courseCardContainer {
-    display: grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap: 20px;
-    margin-bottom: 4em;
-}
-/*Featured Courses Grid Mobile layouts*/
-@media (max-width: 1200px) {
-    .courseCardContainer {
-        grid-template-columns: 1fr 1fr;
-    }
-    .courseCardContainer .courseCard:last-of-type{
-        grid-column: span 2;
-    }
-}
-@media (max-width: 980px) {
-    .courseCardContainer {
-        grid-template-columns: 1fr;
-    }
-    .courseCardContainer .courseCard:last-of-type{
-        grid-column: span 1;
-    }
-}
-.courseCard {
-    /*background-color: aqua;*/
-    padding: 0;
-    border-radius: 10px;
-    box-shadow: 0 10px 10px -5px var(--black);
-}
-
-.courseCard > img {
-    width: 100%;
-    border-bottom: solid 2px black;
-    border-radius: 10px 10px 0 0;
-}
-.cardHeading{
-    text-align: center;
-    color: var(--black);
-}
-.cardHeading:hover{
-    transition: .2s ease-in;
-    color: var(--action-colour);
-}
-.courseCardBody {
-    padding: 16px;
-    /*Make body same height, forcing buttons to align with other cards*/
-    min-height: 300px;
-}
-.courseCardBody>h3{
-    text-align: center;
-}
-.courseCardDescription > a{
+.featured-wrapper{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
 }
+#featured-section-header{
+    text-align: center;
 
-/*Tags & Category Styles*/
-.tagsWrapper{
-    margin-bottom: 10px;
 }
-
-.tagBox,
-.categoryBox{
-    background-color: #f2f2f2;
-    color: var(--black);
-    text-decoration: none;
-    padding: 4px 8px 4px 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-}
-.tagBox:hover,
-.categoryBox:hover{
-    transition: .2s ease-in;
-    color: var(--action-colour-hover);
-}
-
-
-/*Card Footer - Price info & add to cart button*/
-.courseCardFooter {
-    border-top: solid 1px var(--black);
-    display: flex;
-    justify-content: space-between;
-    padding: 16px;
-}
-
-
-/*Buttons*/
-.courseCardButton{
+/*FEATURED BUTTONS*/
+.featured-shop-button{
     background-color: var(--action-colour);
     color: var(--white);
     padding: 8px 16px;
@@ -257,21 +173,120 @@ h3{
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
-.courseCardButton:hover{
+.featured-shop-button:hover{
     transition: .2s ease-in;
     background-color: var(--action-colour-hover);
 }
-.courseCardButton:active {
+.featured-shop-button:active {
     transform: translateY(2px); /*Shifts button on click, for visual feedback*/
 }
 
-
-#featuredShopLink{
+#featured-shop-link{
     text-align: center;
 }
-#featuredShopLink>a{
+#featured-shop-link>a{
     font-size: 1.5em;
 }
+
+/*Course Product Cards*/
+.course-card-container{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    padding-right: 2em;
+    padding-left: 2em;
+    gap: 40px;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+/*MOBILE LAYOUT*/
+@media (max-width: 1200px) {
+    .course-card-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+@media (max-width: 980px) {
+    .course-card-container {
+        grid-template-columns: 1fr;
+    }
+    .course-card-container > li:last-of-type{
+        grid-column: span 1;
+    }
+}
+
+.course-card-container > li{
+    box-shadow: 0 10px 10px -5px var(--black);
+    list-style: none;
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+
+}
+.product-link{
+    max-height: 400px;
+}
+.product-image > img{
+    width: 100%;
+    height: auto;
+    border-bottom: solid 2px var(--black);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.product-details {
+    padding: 1em 1em 0 1em;
+    max-height: 200px;
+}
+
+.product-title {
+    text-align: center;
+    color: var(--black);
+    text-decoration: none;
+}
+.product-link{
+    text-decoration-color: var(--black);
+}
+.product-title:hover{
+    transition: .2s ease-in-out;
+    color: var(--action-colour-hover);
+
+}
+.product-meta{
+    min-height: 100px;
+}
+
+
+
+/*Product Card Footer*/
+.product-footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+        border-top: 1px solid  var(--black);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+/*Buttons*/
+.product-add-to-cart > a{
+    background-color: var(--action-colour);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    margin-right: 8px;
+}
+
+.product-add-to-cart > a:hover{
+    transition: .2s ease-in-out;
+    background-color: var(--action-colour-hover);
+}
+
 
 /*SHOP*/
 .shopContainer{

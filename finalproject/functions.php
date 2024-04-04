@@ -51,7 +51,7 @@ add_action('widgets_init','customFooter');
 
 //set custom post-type
 
-// Shortcode Function
+/*
 function courseCards_shortcode() {
     $products_per_page = is_front_page() ? 3 : 8; // Limit to 3 on the homepage, otherwise default to 8
     $query = new WP_Query(array('post_type' => 'product', 'posts_per_page' => $products_per_page));
@@ -108,7 +108,47 @@ function courseCards_shortcode() {
 
 // Register Shortcode
 add_shortcode('courseCards_shortcode', 'courseCards_shortcode');
+*/
 
+
+//Featured Shortcode
+function featuredCourses_shortcode()
+{
+    $products_per_page = 3; // Limit to 3 featured products
+
+    // Query products with the 'featured' tag
+    $query_args = array(
+        'post_type' => 'product',
+        'posts_per_page' => $products_per_page,
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'product_tag',
+                'field' => 'slug',
+                'terms' => 'featured',
+            ),
+        ),
+    );
+
+    $query = new WP_Query( $query_args );
+
+    while ( $query->have_posts() ) : $query->the_post();
+        global $product;
+
+        $tags = get_the_terms( $product->get_id(), 'product_tag' );
+        $categories = get_the_terms( $product->get_id(), 'product_cat' );
+        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_id() ), 'full' );
+        ?>
+
+
+            <?php wc_get_template_part( 'content', 'product' ); ?>
+
+
+    <?php endwhile;
+    wp_reset_postdata();
+}
+
+// Register Shortcode
+add_shortcode('featuredCourses_shortcode', 'featuredCourses_shortcode');
 
 
 
