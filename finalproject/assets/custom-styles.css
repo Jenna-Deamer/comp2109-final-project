@@ -23,7 +23,9 @@ h2{
 h3{
     font-size: 28px;
 }
-
+main{
+    min-height: 70vh;
+}
 /*NAV*/
 .logo {
     transition: transform 0.3s ease-in-out;
@@ -61,6 +63,25 @@ h3{
     /* Expand  width on hover */
     width: 100%;
 }
+/*Mastheads for every page but Home*/
+.masthead {
+    margin-top: -126px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40vh;
+}
+
+.masthead-content {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center horizontally */
+    text-align: center;
+    height: 100%; /* Ensure heroContent takes up full height */
+}
+
 /*HOME*/
 .hero-section {
     /*Make splashImage go behind the nav bar that's 126px tall*/
@@ -261,10 +282,10 @@ h3{
 
 /*Product Card Footer*/
 .product-footer {
-        display: flex;
-        justify-content: space-between;
-        padding: 16px;
-        border-top: 1px solid  var(--black);
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    border-top: 1px solid  var(--black);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
@@ -289,24 +310,6 @@ h3{
 
 
 /*SHOP*/
-.shop-masthead {
-    margin-top: -126px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 30vh;
-}
-
-.shop-masthead-content {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Center horizontally */
-    text-align: center;
-    height: 100%; /* Ensure heroContent takes up full height */
-}
-
 .shop-container{
     padding: 4em;
 
@@ -349,6 +352,35 @@ h3{
 }
 .woocommerce span.onsale{
     background-color: var(--action-colour);
+}
+
+/*ABOUT PAGE*/
+.about-page{
+    padding-top: 2em;
+    padding-bottom: 4em;
+}
+.about-page>h2{
+    text-align: center;
+    margin-bottom: .5em;
+}
+.about-page>h2:last-of-type{
+    margin-top: 1em;
+}
+figure{
+    width: 500px;
+    height: auto;
+}
+.about-article > figure{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+.about-article> figure > img{
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
 /*FOOTER*/

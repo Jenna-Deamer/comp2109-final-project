@@ -2,8 +2,8 @@
 get_header();
 $shopFeaturedImg = wp_get_attachment_image_src( get_post_thumbnail_id( wc_get_page_id( 'shop' ) ), 'full' );
 ?>
-    <section class="shop-masthead" style="background: url('<?php echo $shopFeaturedImg[0]; ?>');">
-        <div class="shop-masthead-content">
+    <section class="masthead" style="background: url('<?php echo $shopFeaturedImg[0]; ?>');">
+        <div class="masthead-content">
             <h1 class="text-center">Explore Our Selection</h1>
         </div>
     </section>
