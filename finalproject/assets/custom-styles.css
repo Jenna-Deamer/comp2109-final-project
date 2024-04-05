@@ -366,7 +366,7 @@ main{
 .about-page>h2:last-of-type{
     margin-top: 1em;
 }
-figure{
+.about-article > figure{
     width: 500px;
     height: auto;
 }
@@ -381,6 +381,23 @@ figure{
     height: auto;
     border-radius: 8px;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
+}
+/*CONTACT PAGE*/
+#wpforms-submit-140{
+    width: 100px;
+    background-color: var(--action-colour);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+#wpforms-submit-140:hover{
+    transition: .2s ease-in-out;
+    background-color: var(--action-colour-hover);
 }
 
 /*FOOTER*/

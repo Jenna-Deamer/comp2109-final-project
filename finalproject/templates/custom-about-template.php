@@ -9,7 +9,7 @@ $aboutFeaturedImg = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID
 <main>
     <section class="masthead" style="background-image: url('<?php echo esc_url($aboutFeaturedImg[0]); ?>')">
         <div class="masthead-content container">
-            <h1>About Us</h1>
+            <h1><?php echo wp_kses_post(get_field('page_title')); ?></h1>
         </div>
     </section>
     <section class="about-page container">
