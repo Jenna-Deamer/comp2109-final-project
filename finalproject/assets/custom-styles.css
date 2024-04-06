@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Prata&display=swap');
+
 :root {
     --white: #ffeeee;
     --black: #0c0303;
@@ -16,12 +18,18 @@ html {
 }
 h1{
     font-size: 48px;
+    font-family: "Prata", serif;
 }
 h2{
     font-size: 38px;
+    font-family: "Prata", serif;
 }
 h3{
     font-size: 28px;
+    font-family: "Prata", serif;
+}
+body{
+    font-family: "Merriweather", serif;
 }
 main{
     min-height: 70vh;
@@ -35,6 +43,7 @@ main{
     transform: scale(1.2);
 }
 .navbar a {
+    font-family: "Prata", serif;
     color: var(--white);
     text-decoration: none;
     font-size: 1.2em;
@@ -70,6 +79,7 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     height: 40vh;
+    box-shadow: 0 10px 10px -5px var(--black);
 }
 
 .masthead-content {
@@ -391,6 +401,7 @@ main{
 }
 .woocommerce ul.products li.product h3{
     font-size: 20px;
+    font-family: "Prata", serif;
 }
 /*ABOUT PAGE*/
 .about-page{
