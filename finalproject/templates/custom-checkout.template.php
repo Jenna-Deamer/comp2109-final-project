@@ -11,7 +11,7 @@ $checkoutFeaturedImg = wp_get_attachment_image_src(get_post_thumbnail_id(get_the
         <div class="masthead-content container">
             <h1>Checkout</h1>
         </div>
-    </section> <!-- Close masthead section here -->
+    </section>
     <section class="checkout-body container">
         <?php
         // Output WooCommerce checkout form
