@@ -353,7 +353,45 @@ main{
 .woocommerce span.onsale{
     background-color: var(--action-colour);
 }
+/*CART*/
+.cart-body{
+    padding-top: 4em;
+}
+#coupon_code{
+    width: 200px;
+}
+.woocommerce a.button.alt{
+    background-color: var(--action-colour);
+    color: var(--white);
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 
+}
+.woocommerce a.button.alt:hover{
+    transition: .2s ease-in-out;
+    background-color: var(--action-colour-hover);
+}
+.woocommerce table.cart img{
+    max-height: 80px;
+    width: auto;
+}
+.product-name > a{
+    color: var(--black);
+}
+.product-name > a:hover{
+    transition: .2s ease-in-out;
+    color: var(--action-colour-hover);
+}
+.cross-sells,.cart_totals {
+    padding-top: 1em;
+}
+.woocommerce ul.products li.product h3{
+    font-size: 20px;
+}
 /*ABOUT PAGE*/
 .about-page{
     padding-top: 2em;
