@@ -420,6 +420,27 @@ main{
     border-radius: 8px;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
 }
+/*CHECKOUT*/
+.checkout-body{
+    margin-top: 1em;
+    margin-bottom: 4em;
+}
+#place_order{
+    background-color: var(--action-colour);
+    color: var(--white);
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+#place_order:hover{
+    transition: .2s ease-in-out;
+    background-color: var(--action-colour-hover);
+}
+/*INNER PRODUCT TEMPLATE*/
+
 /*CONTACT PAGE*/
 #wpforms-submit-140{
     width: 100px;
@@ -437,7 +458,13 @@ main{
     transition: .2s ease-in-out;
     background-color: var(--action-colour-hover);
 }
-
+#customer_details{
+    background-color: #c2c1c1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    padding: 1em;
+    border-radius: 8px;
+    margin-bottom: 1.2em;
+}
 /*FOOTER*/
 footer{
     padding-top: 1em;
