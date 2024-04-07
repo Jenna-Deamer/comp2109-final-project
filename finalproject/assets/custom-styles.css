@@ -431,6 +431,28 @@ body.product-template-default nav.navbar {
     justify-content: center;
     text-align: center;
 }
+.about-article > figure:first-of-type{
+    margin-left: 2em;
+}
+.about-article > figure:last-of-type{
+    margin-right: 2em;
+}
+
+@media (max-width: 1200px) {
+    .about-article{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .about-article > figure:first-of-type {
+        margin-left: 0;
+    }
+    .about-article > figure:last-of-type {
+        margin-right: 0;
+    }
+}
+
 .about-article> figure > img{
     width: 500px;
     height: auto;
