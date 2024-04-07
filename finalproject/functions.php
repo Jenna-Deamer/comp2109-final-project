@@ -161,3 +161,30 @@ add_action( 'after_setup_theme', 'customtheme_add_woocommerce_support' );
 function enqueue_wc_cart_fragments() { wp_enqueue_script( 'wc-cart-fragments' ); }
 add_action( 'wp_enqueue_scripts', 'enqueue_wc_cart_fragments' );
 //?>
+
+<?php
+remove_action('woocommerce_single_product_summary','woocommerce_template_single_title',5);
+remove_action('woocommerce_single_product_summary','woocommerce_template_single_price',10);
+remove_action('woocommerce_single_product_summary','woocommerce_template_single_add_to_cart',30);
+remove_action('woocommerce_single_product_summary','woocommerce_template_single_meta',40);
+
+remove_action('woocommerce_product_additional_information','wc_display_product_attributes',10);
+
+remove_action('woocommerce_single_variation','woocommerce_single_variation',10);
+
+
+//add information back in a different order
+add_action('woocommerce_single_product_summary','woocommerce_template_single_title',10);
+add_action('woocommerce_single_product_summary','woocommerce_template_single_price',15);
+add_action('woocommerce_single_product_summary','woocommerce_template_single_add_to_cart',15);
+
+// Remove additional information tab on product page
+add_filter( 'woocommerce_product_tabs', 'remove_product_additional_information_tab', 99 );
+
+function remove_product_additional_information_tab( $tabs )
+{
+    unset($tabs['additional_information']); // Remove the additional information tab
+    return $tabs;
+}
+
+?>

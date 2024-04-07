@@ -42,6 +42,12 @@ main{
 .logo:hover {
     transform: scale(1.2);
 }
+/*Make Product Template Nav BG solid colour*/
+body.product-template-default nav.navbar {
+    background-color: var(--primary);
+    margin-bottom: 2em;
+    box-shadow: 0 10px 10px -5px var(--black);
+}
 .navbar a {
     font-family: "Prata", serif;
     color: var(--white);
@@ -113,7 +119,7 @@ main{
 }
 .hero-content > h1,
 .hero-content > h2 {
-    text-shadow: 1px 1px 2px var(--black)z;
+    text-shadow: 2px 2px #151414;
 }
 .hero-content > h2{
     margin-top: .2em;
@@ -465,7 +471,26 @@ main{
 }
 
 /*INNER PRODUCT TEMPLATE*/
-
+body.single-product #primary {
+    padding: 2em 4em;
+}
+.woocommerce div.product p.price {
+    color: var(--primary);
+}
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt {
+    background-color: var(--action-colour);
+    color: var(--white);
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt:hover{
+    transition: .2s ease-in-out;
+    background-color: var(--action-colour-hover);
+}
 /*CONTACT PAGE*/
 #wpforms-submit-140{
     width: 100px;
