@@ -491,6 +491,21 @@ body.single-product #primary {
     transition: .2s ease-in-out;
     background-color: var(--action-colour-hover);
 }
+.woocommerce .woocommerce-breadcrumb{
+    padding: 5px 10px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    display: inline-block;
+    border: 1px solid #bdb8b8;
+}
+.woocommerce .woocommerce-breadcrumb > a:hover{
+    transition: .2s ease-in-out;
+    color: var(--action-colour-hover);
+}
+.wp-post-image{
+    border-radius: 8px;
+}
+
 /*CONTACT PAGE*/
 #wpforms-submit-140{
     width: 100px;
