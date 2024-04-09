@@ -409,6 +409,29 @@ body.product-template-default nav.navbar {
     font-size: 20px;
     font-family: "Prata", serif;
 }
+/*EMPTY CART */
+.woocommerce-info::before{
+    color: var(--action-colour);
+}
+.woocommerce-info{
+    border-top-color: var(--action-colour);
+}
+.woocommerce a.button{
+    background-color: var(--action-colour);
+    color: var(--white);
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+.woocommerce a.button:hover{
+    transition: .2s ease-in-out;
+    background-color: var(--action-colour-hover);
+    color: var(--white);
+}
+
 /*ABOUT PAGE*/
 .about-page{
     padding-top: 2em;
