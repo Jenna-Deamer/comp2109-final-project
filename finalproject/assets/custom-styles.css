@@ -487,6 +487,9 @@ body.product-template-default nav.navbar {
     margin-top: 1em;
     margin-bottom: 4em;
 }
+.woocommerce-input-wrapper > input{
+    padding: 4px 8px;
+}
 #place_order{
     background-color: var(--action-colour);
     color: var(--white);
@@ -501,6 +504,8 @@ body.product-template-default nav.navbar {
     transition: .2s ease-in-out;
     background-color: var(--action-colour-hover);
 }
+
+
 /*MY ACCOUNT*/
 .account-body{
     margin-top: 2em;
@@ -569,11 +574,11 @@ body.single-product #primary {
     background-color: var(--action-colour-hover);
 }
 #customer_details{
-    background-color: #c9c9c9;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     padding: 1em;
     border-radius: 8px;
     margin-bottom: 1.2em;
+
 }
 /*FOOTER*/
 footer{

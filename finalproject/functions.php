@@ -236,6 +236,8 @@ function remove_woocommerce_sidebar() {
 }
 add_action( 'init', 'remove_woocommerce_sidebar' );
 
+// Remove additional information section from  checkout
+add_filter('woocommerce_enable_order_notes_field', '__return_false');
 
 
 

@@ -17,6 +17,7 @@ $checkoutFeaturedImg = wp_get_attachment_image_src(get_post_thumbnail_id(get_the
         // Output WooCommerce checkout form
         echo do_shortcode('[woocommerce_checkout]');
         ?>
+
     </section>
 </main>
 
