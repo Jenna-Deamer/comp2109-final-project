@@ -42,9 +42,9 @@ get_header();
         </div>
         <section id="featured-shop-link">
             <h2 class="mb-4">Not seeing something you like?</h2>
-            <a href="#" class="featured-shop-button" ">Explore More Courses</a>
+            <a href="<?php echo esc_url( get_permalink( wc_get_page_id( 'shop' ) ) ); ?>" class="featured-shop-button">Explore More Courses</a>
         </section>
-    </section>
+
 
 </main>
 

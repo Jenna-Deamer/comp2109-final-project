@@ -102,66 +102,6 @@ function custom_learning_material_post_type() {
 add_action( 'init', 'custom_learning_material_post_type', 0 );
 
 
-/*
-function courseCards_shortcode() {
-    $products_per_page = is_front_page() ? 3 : 8; // Limit to 3 on the homepage, otherwise default to 8
-    $query = new WP_Query(array('post_type' => 'product', 'posts_per_page' => $products_per_page));
-    while ($query->have_posts()) : $query->the_post();
-    //enable use of product var
-        global $product;
-        // Get tags
-        $tags = get_the_terms($product->get_id(), 'product_tag');
-        // Get categories
-        $categories = get_the_terms($product->get_id(), 'product_cat');
-        //get image
-        $image = wp_get_attachment_image_src(get_post_thumbnail_id($product->get_id()), 'full');
-        ?>
-        <div class="courseCard">
-            <img src="<?php echo $image[0]; ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
-            <div class="courseCardBody">
-                <a href="<?php echo get_permalink(); ?>" class="cardHeading"> <h3><?php echo get_the_title(); ?></h3> </a>
-
-                <div class="courseCardDescription">
-                    <p><?php echo wp_kses_post($product->get_short_description()); ?></p>
-                </div>
-
-    <p>Categories:
-        <?php
-        //loop through all category & tags, for grey bg styles
-        foreach ($categories as $category) {
-            echo '<a href="' . get_term_link($category) . '" class="categoryBox">' . $category->name . '</a>';
-        }
-        ?>
-    </p>
-<div class="tagsWrapper">
-    <p>Tags:
-        <?php
-        foreach ($tags as $tag) {
-            echo '<a href="' . get_term_link($tag) . '" class="tagBox">' . $tag->name . '</a>';
-        }
-        ?>
-    </p>
-</div>
-</div>
-
-
-            <div class="courseCardFooter">
-                <p><strong>Price:</strong> <?php echo $product->get_price_html(); ?></p>
-
-                <button class="courseCardButton" data-product_id="<?php echo $product->get_id(); ?>"> Add to Cart</button>
-            </div>
-        </div>
-    <?php endwhile;
-    wp_reset_postdata();
-}
-
-
-
-// Register Shortcode
-add_shortcode('courseCards_shortcode', 'courseCards_shortcode');
-*/
-
-
 //Featured Shortcode
 function featuredCourses_shortcode()
 {
