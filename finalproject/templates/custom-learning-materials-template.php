@@ -38,6 +38,17 @@ $learningMaterialFeaturedImg = wp_get_attachment_image_src(get_post_thumbnail_id
                         <div class="learning-material-excerpt">
                             <?php the_excerpt(); ?>
                         </div>
+                        <div class="post-tags">
+                            <?php
+                            //get & display tags
+                            $tags = get_the_tags();
+                            if ($tags) {
+                                foreach ($tags as $tag) {
+                                    echo '<span class="tag">' . $tag->name . '</span>';
+                                }
+                            }
+                            ?>
+                        </div>
                         <a href="<?php the_permalink(); ?>" class="material-button">View Full Article</a>
                     </article>
                 <?php
