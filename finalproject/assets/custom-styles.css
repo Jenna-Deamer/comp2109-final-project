@@ -591,6 +591,37 @@ body.single-product #primary {
 .learning-material-page{
     padding: 4em;
 }
+
+.material-post-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+    text-align: center;
+}
+.learning-material-post>img{
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    height: 200px;
+    width: auto;
+}
+.learning-material-excerpt{
+    padding: 1em 0;
+}
+.material-button{
+    background-color: var(--action-colour);
+    padding: 10px 20px;
+    color: var(--white);
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+.material-button:hover{
+    transition: .2s ease-in-out;
+    background-color: var(--action-colour-hover);
+}
 /*FOOTER*/
 footer{
     padding-top: 1em;
