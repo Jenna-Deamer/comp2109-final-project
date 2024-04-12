@@ -101,6 +101,21 @@ function custom_learning_material_post_type() {
 //set custom post type
 add_action( 'init', 'custom_learning_material_post_type', 0 );
 
+//attach custom template to custom post learning_material
+function custom_learning_material_template($template) {
+    global $post;
+
+    //attach template to all post types = learning_material
+    if ($post->post_type == 'learning_material') {
+        $template = get_template_directory() . '/templates/single-learning_material-template.php';
+    }
+
+    return $template;
+}
+//set
+add_filter('single_template', 'custom_learning_material_template');
+
+
 
 //Featured Shortcode
 function featuredCourses_shortcode()

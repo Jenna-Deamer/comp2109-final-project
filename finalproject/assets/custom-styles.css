@@ -622,6 +622,11 @@ body.single-product #primary {
     transition: .2s ease-in-out;
     background-color: var(--action-colour-hover);
 }
+/*SINGLE MATERIAL POST*/
+.single-material-post-container{
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
 /*FOOTER*/
 footer{
     padding-top: 1em;
